@@ -1,25 +1,3 @@
-/*
-<div class="card" style="margin-top: 1%; margin-bottom: 1%; background-color: #015958;">
-  <div class="card-header">
-    <p><i class="fa-solid fa-award"></i> &nbsp; Bacharel em Sistemas da Informação</p>
-  </div>
-
-
-
-  <div class="card-body">
-    <p>
-      <i class="fa-solid fa-school"></i> &nbsp; UCS
-    </p>
-    <p>
-      <i class="fa-regular fa-calendar"></i> &nbsp; 09/01/2017 - 02/06/2017
-    </p>
-    <p>
-      <i class="fa-solid fa-certificate"></i> &nbsp; https://drive.google.com/file/d/1_uyR5Nh40MeiecZtZlpGvxh0v5ZQdgJb/view?usp=share_link
-    </p>
-  </div>
-
-</div>
-*/
 function createCard(curso) {
   var divCard = document.createElement('div');
   divCard.className = "card";
@@ -77,9 +55,11 @@ function createCard(curso) {
   var iconeCertiCurso = document.createElement('i');
   iconeCertiCurso.className = "fa-solid fa-certificate";
 
-  var spanCertiCurso = document.createElement('span');
+  var spanCertiCurso = document.createElement('a');
+  spanCertiCurso.href = curso.certificado;
+  spanCertiCurso.target = "_blank";
   spanCertiCurso.innerText = curso.certificado;
-  spanCertiCurso.style = "margin-left: 1%;"
+  spanCertiCurso.style = "margin-left: 1%; color: #FFF;"
 
   var paragCertiCurso = document.createElement('p');
   paragCertiCurso.appendChild(iconeCertiCurso)
